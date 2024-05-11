@@ -2,13 +2,17 @@ package com.example.androidstudy
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var button: Button
     private lateinit var imageView: ImageView
+    private lateinit var textView: TextView
+    private lateinit var editText: EditText
     private var flag = 1;
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,16 +21,19 @@ class MainActivity : AppCompatActivity() {
 
         imageView = findViewById(R.id.imageView1)
 
+        textView = findViewById(R.id.textView2)
+        editText = findViewById(R.id.editText1)
+
         button = findViewById(R.id.button1)
         button.setOnClickListener {
-            // Implement your onClick logic here
             button.text = getString(R.string.i_am_changed)
-            if (flag == 1) {
+            textView.text = editText.getText().toString()
+            flag = if (flag == 1) {
                 imageView.setImageResource(R.drawable.icon_home_grey)
-                flag = 0
+                0
             } else {
                 imageView.setImageResource(R.drawable.icon_home_selected)
-                flag = 1
+                1
             }
         }
 

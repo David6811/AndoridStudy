@@ -4,4 +4,6 @@
     <string name="fragment_1">Fragment 1</string>
     <string name="fragmentText_1">Fragment 1</string>
     <string name="fragmentText_2">fragment 2</string>
+    <string name="search">Search</string>
+    <string name="i_am_changed">I am changed</string>
 </resources>

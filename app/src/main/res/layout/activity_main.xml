@@ -5,10 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<fragment
-    android:name="com.example.androidstudy.Fragment1"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/fragmentContainer" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="298dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableStart="@drawable/ic_launcher_foreground"
+        android:text="@string/search" />
+
+
+
 
 </RelativeLayout>

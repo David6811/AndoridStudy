@@ -7,4 +7,6 @@
     <string name="search">Search</string>
     <string name="i_am_changed">I am changed</string>
     <string name="description">description</string>
+    <string name="name">Name</string>
+    <string name="input_name">Input Name</string>
 </resources>

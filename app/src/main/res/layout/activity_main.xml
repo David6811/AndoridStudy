@@ -5,35 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<androidx.fragment.app.FragmentContainerView
+<fragment
+    android:name="com.example.androidstudy.Fragment1"
     android:layout_width="match_parent"
-    android:layout_height="600dp"
+    android:layout_height="match_parent"
     android:id="@+id/fragmentContainer" />
-
-
-    <Button
-        android:id="@+id/fragment1Btn"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="@color/black"
-        android:textColor="@color/white"
-        android:text="@string/fragment_1" />
-
-    <Button
-        android:id="@+id/fragment2Btn"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="@color/black"
-        android:textColor="@color/white"
-        android:text="@string/fragment_1"
-        tools:ignore="RtlHardcoded" />
-
 
 </RelativeLayout>

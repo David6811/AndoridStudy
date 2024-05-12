@@ -7,5 +7,13 @@
     tools:context=".MainActivity">
 
 
-
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="143dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/favicon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

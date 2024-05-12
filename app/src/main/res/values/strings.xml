@@ -9,4 +9,13 @@
     <string name="description">description</string>
     <string name="name">Name</string>
     <string name="input_name">Input Name</string>
+    <string name="input_phone_number">input phone number</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender:</string>
+    <string name="my_favorite_courses">My favorite courses</string>
+    <string name="java">Java</string>
+    <string name="android">Android</string>
+    <string name="english">English</string>
+    <string name="confirmation">Confirmation</string>
 </resources>

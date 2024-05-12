@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidStudy</string>
+    <string name="app_name">Student Information</string>
     <string name="hello">Hello</string>
     <string name="fragment_1">Fragment 1</string>
     <string name="fragmentText_1">Fragment 1</string>

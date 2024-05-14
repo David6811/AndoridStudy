@@ -18,4 +18,8 @@
     <string name="android">Android</string>
     <string name="english">English</string>
     <string name="confirmation">Confirmation</string>
+    <string name="input_username">Input Username</string>
+    <string name="input_password">Input Password</string>
+    <string name="login">Login</string>
+    <string name="exit">exit</string>
 </resources>

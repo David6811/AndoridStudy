@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding.etName.setText(username)
         Toast.makeText(this@MainActivity, "$username, How are you", Toast.LENGTH_SHORT).show()
 
+
         val checkBoxListener = CheckBoxListener()
         binding.cbJava.setOnCheckedChangeListener(checkBoxListener)
         binding.cbAndroid.setOnCheckedChangeListener(checkBoxListener)
@@ -36,11 +37,26 @@ class MainActivity : AppCompatActivity() {
             val rgid = binding.rgGender.checkedRadioButtonId
             val gender = if (rgid == R.id.rb_male) "Male" else "Female"
             val info = "Name: $etName, mobile: $etPhone, gender: $gender, favorite: $selected"
+
             val sb = Snackbar.make(binding.conLayout, info, BaseTransientBottomBar.LENGTH_LONG)
             sb.setAction("Confirm") {
                 Toast.makeText(this@MainActivity, "Confirmed", Toast.LENGTH_SHORT).show()
+
+                val intent_re = intent
+                val bundle = Bundle()
+                val user = User(
+                    etName,
+                    etPhone,
+                    gender
+                )
+                bundle.putSerializable("user_info", user)
+                intent_re.putExtras(bundle)
+                setResult(RESULT_OK, intent_re)
+                finish()
             }
             sb.show()
+
+
         }
     }
 

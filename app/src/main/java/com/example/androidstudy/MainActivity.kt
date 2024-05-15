@@ -1,5 +1,6 @@
 package com.example.androidstudy
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.CompoundButton
 import android.widget.Toast
@@ -17,6 +18,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val intent = intent
+        val username = intent.getStringExtra("user_name")
+        binding.etName.setText(username)
+        Toast.makeText(this@MainActivity, "$username, How are you", Toast.LENGTH_SHORT).show()
 
         val checkBoxListener = CheckBoxListener()
         binding.cbJava.setOnCheckedChangeListener(checkBoxListener)

@@ -25,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 // Move to MainActivity only if both username and password are provided
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                intent.putExtra("user_name", username)
                 startActivity(intent)
             }
         }

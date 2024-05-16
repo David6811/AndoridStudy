@@ -22,4 +22,10 @@
     <string name="input_password">Input Password</string>
     <string name="login">Login</string>
     <string name="exit">exit</string>
+    <string name="Fruits">Fruits</string>
+    <array name="constellation" >
+        <item>Apple</item>
+        <item>Peach</item>
+        <item>Pair</item>
+    </array>
 </resources>

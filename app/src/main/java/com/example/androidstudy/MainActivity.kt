@@ -1,8 +1,10 @@
 package com.example.androidstudy
 
-import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.CompoundButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidstudy.databinding.ActivityMainBinding
@@ -29,6 +31,20 @@ class MainActivity : AppCompatActivity() {
         binding.cbJava.setOnCheckedChangeListener(checkBoxListener)
         binding.cbAndroid.setOnCheckedChangeListener(checkBoxListener)
         binding.cbEnglish.setOnCheckedChangeListener(checkBoxListener)
+
+        binding.spFruits.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(adapterView: AdapterView<*>?, view: View, i: Int, l: Long) {
+                // Your code for when an item is selected
+                val fruits = view as TextView
+                val selectedFruit = fruits.text.toString()
+                binding.etPhone.setText(selectedFruit)
+            }
+
+            override fun onNothingSelected(adapterView: AdapterView<*>?) {
+                // Your code for when nothing is selected (optional)
+            }
+        }
+
 
 
         binding.btConfirmation.setOnClickListener {

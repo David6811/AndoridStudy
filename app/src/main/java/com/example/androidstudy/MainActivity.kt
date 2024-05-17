@@ -6,10 +6,9 @@ import android.widget.AdapterView
 import android.widget.CompoundButton
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidstudy.databinding.ActivityMainBinding
-import com.google.android.material.snackbar.BaseTransientBottomBar
-import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity() {
@@ -54,23 +53,41 @@ class MainActivity : AppCompatActivity() {
             val gender = if (rgid == R.id.rb_male) "Male" else "Female"
             val info = "Name: $etName, mobile: $etPhone, gender: $gender, favorite: $selected"
 
-            val sb = Snackbar.make(binding.conLayout, info, BaseTransientBottomBar.LENGTH_LONG)
-            sb.setAction("Confirm") {
-                Toast.makeText(this@MainActivity, "Confirmed", Toast.LENGTH_SHORT).show()
+            val builder = AlertDialog.Builder(this@MainActivity)
+                .setTitle("Information")
+                .setIcon(R.drawable.icon_search)
+                .setMessage(info)
+                .setPositiveButton(
+                    "Positive"
+                ) { dialogInterface, i ->
+                    // Your code for positive button click
+                }
+                .setNegativeButton(
+                    "Negative"
+                ) { dialogInterface, i ->
+                    // Your code for negative button click
+                }
 
-                val intent_re = intent
-                val bundle = Bundle()
-                val user = User(
-                    etName,
-                    etPhone,
-                    gender
-                )
-                bundle.putSerializable("user_info", user)
-                intent_re.putExtras(bundle)
-                setResult(RESULT_OK, intent_re)
-                finish()
-            }
-            sb.show()
+            builder.create().show()
+
+
+//            val sb = Snackbar.make(binding.conLayout, info, BaseTransientBottomBar.LENGTH_LONG)
+//            sb.setAction("Confirm") {
+//                Toast.makeText(this@MainActivity, "Confirmed", Toast.LENGTH_SHORT).show()
+//
+//                val intent_re = intent
+//                val bundle = Bundle()
+//                val user = User(
+//                    etName,
+//                    etPhone,
+//                    gender
+//                )
+//                bundle.putSerializable("user_info", user)
+//                intent_re.putExtras(bundle)
+//                setResult(RESULT_OK, intent_re)
+//                finish()
+//            }
+//            sb.show()
 
 
         }

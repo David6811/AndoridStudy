@@ -26,6 +26,10 @@ class MainActivity : AppCompatActivity() {
     private fun replaceFragment(fragment : Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
+        val bundle = Bundle()
+        bundle.putString("content", "I am from MainActivity")
+        fragment.arguments = bundle
+
         fragmentTransaction.replace(R.id.fragmentContainer,fragment)
         fragmentTransaction.commit()
     }

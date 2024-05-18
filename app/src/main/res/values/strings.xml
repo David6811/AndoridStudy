@@ -4,4 +4,7 @@
     <string name="fragment_1">Fragment 1</string>
     <string name="fragmentText_1">Fragment 1</string>
     <string name="fragmentText_2">fragment 2</string>
+    <string name="fragment_2">fragment_2</string>
+    <string name="input_content_for_testing_pass_parameter_to_mainactivity">Input content for testing pass parameter to MainActivity</string>
+    <string name="send_message_to_mainactivity">Send Message to MainActivity</string>
 </resources>

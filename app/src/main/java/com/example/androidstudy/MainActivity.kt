@@ -1,13 +1,14 @@
 package com.example.androidstudy
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.androidstudy.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() , FragmentSendMessageListener{
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -32,5 +33,9 @@ class MainActivity : AppCompatActivity() {
 
         fragmentTransaction.replace(R.id.fragmentContainer,fragment)
         fragmentTransaction.commit()
+    }
+
+    override fun getMsgFromFragment(msg: String) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 }

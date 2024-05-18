@@ -1,4 +1,5 @@
 package com.example.androidstudy
 
-interface FragmentSendMessage {
+interface FragmentSendMessageListener {
+    fun getMsgFromFragment(msg: String)
 }

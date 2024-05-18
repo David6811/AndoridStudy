@@ -32,7 +32,7 @@
         android:layout_marginBottom="50dp"
         android:backgroundTint="@color/black"
         android:textColor="@color/white"
-        android:text="@string/fragment_1"
+        android:text="@string/fragment_2"
         tools:ignore="RtlHardcoded" />
 
 

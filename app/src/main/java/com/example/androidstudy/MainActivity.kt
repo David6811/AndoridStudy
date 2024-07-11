@@ -8,6 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : ComponentActivity() {
     private lateinit var recyclerView: RecyclerView
+    private val fruits: MutableList<Fruit> = mutableListOf(
+        Fruit("Apple", R.drawable.ic_launcher_background),
+        Fruit("Apple", R.drawable.ic_launcher_background)
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

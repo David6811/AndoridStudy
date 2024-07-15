@@ -1,6 +1,8 @@
 package com.example.androidstudy
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,6 +27,14 @@ class MainActivity : ComponentActivity() {
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
         val adapter = FruitAdapter(fruits)
+        adapter.setOnItemClickListener(object : OnItemClickListener {
+            override fun onItemClick(view: View, position: Int) {
+                // Handle item click here
+                Toast.makeText(this@MainActivity, "aaas $position", Toast.LENGTH_SHORT).show()
+                // Perform your action with the clicked fruit
+            }
+        })
+
         recyclerView.adapter = adapter
     }
 }
